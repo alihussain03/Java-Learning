@@ -5,11 +5,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        ScoreBoard scoreBoard = new ScoreBoard(3);
-        scoreBoard.add(new GameEntry("Java", 3));
-        scoreBoard.add(new GameEntry("Java", 4));
-        scoreBoard.add(new GameEntry("Java", 5));
-        scoreBoard.add(new GameEntry("Java", 8));
+        Three_2_ScoreBoard scoreBoard = new Three_2_ScoreBoard(3);
+        scoreBoard.add(new Three_1_GameEntry("Java", 3));
+        scoreBoard.add(new Three_1_GameEntry("Java", 4));
+        scoreBoard.add(new Three_1_GameEntry("Java", 5));
+        scoreBoard.add(new Three_1_GameEntry("Java", 8));
 
         scoreBoard.remove(0);
 
@@ -21,27 +21,29 @@ public class Main {
 
         System.out.println("-----------Start of Singly linked list---------------------");
 
-        SinglyLinkedList singlyLinkedList = new SinglyLinkedList<>();
-        singlyLinkedList.addFirst(new String("Hello"));
-        singlyLinkedList.addFirst(new String("world"));
-        singlyLinkedList.addFirst(new String("java"));
-        singlyLinkedList.addLast(new String("Last"));
+        Three_7_SinglyLinkedList<Object> singlyLinkedList = new Three_7_SinglyLinkedList<>();
+        singlyLinkedList.addFirst("Hello");
+        singlyLinkedList.addFirst("world");
+        singlyLinkedList.addFirst("java");
+        singlyLinkedList.addLast("Last");
 
-        SinglyLinkedList singlyLinkedList1 = new SinglyLinkedList<>();
-        singlyLinkedList1.addFirst(new String("Hello"));
-        singlyLinkedList1.addFirst(new String("world"));
-        singlyLinkedList1.addFirst(new String("java"));
-        singlyLinkedList1.addLast(new String("Last1"));
-        // System.out.println(singlyLinkedList.size());
+        System.out.println("Singly list size is "+singlyLinkedList.size());
+
+        Three_7_SinglyLinkedList<Object> singlyLinkedList1 = new Three_7_SinglyLinkedList<>();
+        singlyLinkedList1.addFirst("Hello");
+        singlyLinkedList1.addFirst("world");
+        singlyLinkedList1.addFirst("java");
+        singlyLinkedList1.addLast("Last1");
+
         // singlyLinkedList.removeFirst();
         System.out.println("Lists are equal ? "+singlyLinkedList1.equals(singlyLinkedList));
         System.out.println("\n");
         System.out.println("-----------Start of Doubly linked list---------------------");
-        DoublyLinkedList doublyLinkedList = new DoublyLinkedList();
-        doublyLinkedList.addFirst(new String("Add first "));
-        doublyLinkedList.addLast(new String("Add Last "));
-        doublyLinkedList.addLast(new String("Add Last 1"));
-        doublyLinkedList.addBefore(new String("Add before"), 1);
+        Three_8_DoublyLinkedList<Object> doublyLinkedList = new Three_8_DoublyLinkedList<>();
+        doublyLinkedList.addFirst("Add first ");
+        doublyLinkedList.addLast("Add Last ");
+        doublyLinkedList.addLast("Add Last 1");
+        doublyLinkedList.addBefore("Add before", 1);
 
         System.out.println(doublyLinkedList.size());
         System.out.println(doublyLinkedList.isEmpty());
