@@ -1,4 +1,4 @@
-package chapter5;
+package chapter5_Recursion;
 
 public class Five_2_DrawRuler {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package chapter5;
+package chapter5_Recursion;
 
 public class five_6_BinaryRecursion {
     public static void main(String[] args) {

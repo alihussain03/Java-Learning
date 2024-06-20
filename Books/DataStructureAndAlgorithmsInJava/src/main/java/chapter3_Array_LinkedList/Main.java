@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3_Array_LinkedList;
 
 
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3_Array_LinkedList;
 
 /**
  * Simulation of a Tic-Tac-Toe game (does not do strategy).

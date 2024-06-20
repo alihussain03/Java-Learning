@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3_Array_LinkedList;
 
 public class Three_8_DoublyLinkedList<E> {
     private Node<E> header;

@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3_Array_LinkedList;
 
 public class Three_2_ScoreBoard {
     private int numEntries = 0;

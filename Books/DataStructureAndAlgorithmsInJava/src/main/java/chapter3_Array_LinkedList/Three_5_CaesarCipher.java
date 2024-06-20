@@ -1,4 +1,4 @@
-package chapter3;
+package chapter3_Array_LinkedList;
 
 public class Three_5_CaesarCipher {
     protected char[] encoder = new char[26];
