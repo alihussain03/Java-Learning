@@ -68,7 +68,14 @@ public class five_5_LinearRecursion {
 
     public static double powerSecondMethod(double x, int n) {
         if (n == 0) return 1;
-        else return x * power(x, n - 1);
+        else {
+            double partial = powerSecondMethod(x, n / 2);
+            double result = partial * partial;
+            if (n % 2 == 1) {
+                result *= x;
+            }
+            return result;
+        }
     }
 
 
