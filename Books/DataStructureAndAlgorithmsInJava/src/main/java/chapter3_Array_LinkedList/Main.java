@@ -28,6 +28,7 @@ public class Main {
         singlyLinkedList.addLast("Last");
 
         System.out.println("Singly list size is "+singlyLinkedList.size());
+        singlyLinkedList.printList();
 
         Three_7_SinglyLinkedList<Object> singlyLinkedList1 = new Three_7_SinglyLinkedList<>();
         singlyLinkedList1.addFirst("Hello");
@@ -39,6 +40,7 @@ public class Main {
         System.out.println("Lists are equal ? "+singlyLinkedList1.equals(singlyLinkedList));
         System.out.println("\n");
         System.out.println("-----------Start of Doubly linked list---------------------");
+
         Three_8_DoublyLinkedList<Object> doublyLinkedList = new Three_8_DoublyLinkedList<>();
         doublyLinkedList.addFirst("Add first ");
         doublyLinkedList.addLast("Add Last ");

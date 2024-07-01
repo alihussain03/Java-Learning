@@ -1,5 +1,7 @@
 package chapter3_Array_LinkedList;
 
+
+
 public class Three_7_SinglyLinkedList<E> {
 
     private Node<E> head;
@@ -37,7 +39,7 @@ public class Three_7_SinglyLinkedList<E> {
     }
 
     public void addLast(E e) {
-        Node<E> newest = new Node(e, null);
+        Node<E> newest = new Node<>(e, null);
         if (isEmpty()) head = newest;
         else tail.setNext(newest);
         tail = newest;
