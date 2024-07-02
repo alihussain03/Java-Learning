@@ -1,6 +1,6 @@
 package chapter6_Stack_Queue;
 
-public interface Six_5_Queue<E>{
+public interface Six_6_QueueInterface<E>{
     int size();
 
     boolean isEmpty();
@@ -10,4 +10,5 @@ public interface Six_5_Queue<E>{
     E first();
 
     E dequeue();
+
 }

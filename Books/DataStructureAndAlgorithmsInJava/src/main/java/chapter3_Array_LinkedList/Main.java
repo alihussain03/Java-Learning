@@ -41,7 +41,7 @@ public class Main {
         System.out.println("\n");
         System.out.println("-----------Start of Doubly linked list---------------------");
 
-        Three_8_DoublyLinkedList<Object> doublyLinkedList = new Three_8_DoublyLinkedList<>();
+        Three_9_DoublyLinkedList<Object> doublyLinkedList = new Three_9_DoublyLinkedList<>();
         doublyLinkedList.addFirst("Add first ");
         doublyLinkedList.addLast("Add Last ");
         doublyLinkedList.addLast("Add Last 1");

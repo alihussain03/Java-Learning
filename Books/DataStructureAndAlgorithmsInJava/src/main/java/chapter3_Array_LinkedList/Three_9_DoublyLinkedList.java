@@ -1,11 +1,11 @@
 package chapter3_Array_LinkedList;
 
-public class Three_8_DoublyLinkedList<E> {
+public class Three_9_DoublyLinkedList<E> {
     private Node<E> header;
     private Node<E> trailer;
     private int size = 0;
 
-    public Three_8_DoublyLinkedList() {
+    public Three_9_DoublyLinkedList() {
         header = new Node<>(null, null, null);
         trailer = new Node<>(null, header, null);
         header.setNext(trailer);
