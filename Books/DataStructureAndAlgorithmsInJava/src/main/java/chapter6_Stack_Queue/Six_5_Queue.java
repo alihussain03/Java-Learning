@@ -10,4 +10,8 @@ public interface Six_5_Queue<E>{
     E first();
 
     E dequeue();
+
+    public static void main(String[] args) {
+        System.out.println("Queue");
+    }
 }
