@@ -20,7 +20,7 @@ public class Six_2_Stack_Using_LinkedList<E> implements Six_0_Stack<E>{
        list.addFirst(e);
     }
 
-    public E top() {
+    public E peek() {
         return (E) list.first();
     }
 
@@ -35,7 +35,7 @@ public class Six_2_Stack_Using_LinkedList<E> implements Six_0_Stack<E>{
         stack.push(3);
 
         stack.pop();
-        System.out.println(stack.top());
+        System.out.println(stack.peek());
     }
 
     public static class StackOverflowException extends Exception {

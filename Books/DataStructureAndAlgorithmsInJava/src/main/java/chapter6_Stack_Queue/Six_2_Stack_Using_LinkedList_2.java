@@ -1,5 +1,6 @@
 package chapter6_Stack_Queue;
 
+//Example is not from the book
 public class Six_2_Stack_Using_LinkedList_2<E> {
 
     private static final int MAX_SIZE = 40;

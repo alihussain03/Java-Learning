@@ -7,7 +7,7 @@ public interface Six_0_Stack<E> {
 
     void push(E e);
 
-    Object top();
+    Object peek();
 
     Object pop();
 }

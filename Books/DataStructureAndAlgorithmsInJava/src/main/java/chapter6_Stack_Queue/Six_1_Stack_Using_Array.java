@@ -27,7 +27,7 @@ public class Six_1_Stack_Using_Array<E> implements Six_0_Stack<E> {
         data[++t] = e; // increment t before storing new item
     }
 
-    public E top() {
+    public E peek() {
         if (isEmpty()) return null;
         return data[t];
     }
@@ -48,7 +48,7 @@ public class Six_1_Stack_Using_Array<E> implements Six_0_Stack<E> {
         stack.push(2);
         stack.push(3);
         stack.pop();
-        System.out.println("Top Element is " + stack.top());
+        System.out.println("Top Element is " + stack.peek());
 
     }
 
