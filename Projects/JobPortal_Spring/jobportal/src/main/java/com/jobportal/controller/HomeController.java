@@ -1,2 +1,11 @@
-package com.jobportal.controller;public class HomeController {
+package com.jobportal.controller;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HomeController {
+
+    public String home() {
+        return "index";
+    }
 }
