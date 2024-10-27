@@ -1,4 +1,4 @@
-package functionalInterface;
+package chapter3.lambda.predefinedfunctionalinterface;
 
 import java.util.function.BiFunction;
 

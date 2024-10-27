@@ -6,25 +6,32 @@ import java.util.function.Consumer;
 
 public class ConsumerPractice {
 
-    public static void main(String[] arg) {
-        List<String> listOfString = new ArrayList<>();
-        listOfString.add("Hello World");
-        listOfString.add("Nokia");
-        listOfString.add("Hello World");
-        listOfString.add("Nokia");
+  public static void main(String[] args) {
 
-        Consumer<String> consumer = s -> System.out.println(s);
+    List<Integer> intList = new ArrayList<>();
+    intList.add(1);
+    intList.add(4);
+    intList.add(5);
+    intList.add(6);
+    intList.add(8);
 
-        printUsingConsumer(listOfString, consumer);
+//    Consumer<Integer> consumer = integer -> System.out.println(integer);
+    Consumer<Integer> consumer = System.out :: println ;
+
+    consumer.accept(56);
+
+    printElements(intList, consumer);
+
+
+  }
+
+  private static <T> void printElements(List<T> list, Consumer<T> consumer) {
+
+    for (T t : list) {
+
+      consumer.accept(t);
 
     }
 
-    static <T> void printUsingConsumer(List<T> list, Consumer<T> consumer) {
-        list.forEach(t -> {
-            consumer.accept(t);
-        });
-
-    }
-
-
+  }
 }

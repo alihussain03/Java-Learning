@@ -19,9 +19,7 @@ public class FunctionPractice {
 
     static <T, R> List<R> filterUsingGenerics(List<T> listString, Function<T, R> function) {
         List<R> testString2 = new ArrayList<>();
-
         listString.forEach(s -> {
-
             testString2.add(function.apply(s));
         });
         return testString2;
