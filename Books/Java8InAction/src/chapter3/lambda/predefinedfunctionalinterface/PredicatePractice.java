@@ -15,21 +15,21 @@ public class PredicatePractice {
         listOfString.add("Hello World");
         listOfString.add("Nokia");
 
-    /*Predicate<String> predicateForEmptyString = s1 -> !s1.isBlank();
-    List<String> sortedList = filterSting(listOfString, predicateForEmptyString);
-    List<String> sorted_list = filterUsingGenerics(listOfString, predicateForEmptyString);
-    System.out.println(sortedList.size());
-    System.out.println(sorted_list.size());
+        Predicate<String> predicateForEmptyString = s1 -> !s1.isBlank();
+        List<String> sortedList = filterSting(listOfString, predicateForEmptyString);
+        List<String> sorted_list = filterUsingGenerics(listOfString, predicateForEmptyString);
+        System.out.println(sortedList.size());
+        System.out.println(sorted_list.size());
 
-    Predicate<String> predicateForStringContains = s1 -> s1.contains("Nokia");
-    List<String> sortedList2 = filterSting(listOfString, predicateForStringContains);
+        Predicate<String> predicateForStringContains = s1 -> s1.contains("Nokia");
+        List<String> sortedList2 = filterSting(listOfString, predicateForStringContains);
 
-    List<Integer> intList = List.of(2, 1, 1, 6, 3, 8);
-    Predicate<Integer> predicateForIntegerAndGenerics = s1 -> s1 % 2 == 0;
-    List<Integer> sortedList3 = filterUsingGenerics(intList, predicateForIntegerAndGenerics);
+        List<Integer> intList = List.of(2, 1, 1, 6, 3, 8);
+        Predicate<Integer> predicateForIntegerAndGenerics = s1 -> s1 % 2 == 0;
+        List<Integer> sortedList3 = filterUsingGenerics(intList, predicateForIntegerAndGenerics);
 
-    System.out.println(sortedList2.size());
-    System.out.println(sortedList3.size());*/
+        System.out.println(sortedList2.size());
+        System.out.println(sortedList3.size());
     }
 
     static List<String> filterSting(List<String> listString, Predicate predicate) {
