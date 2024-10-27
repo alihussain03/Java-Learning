@@ -2,5 +2,5 @@ package chapter2;
 
 public interface AppleFormatter {
 
-  String accept(Apple a);
+    String accept(Apple a);
 }

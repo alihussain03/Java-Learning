@@ -4,7 +4,6 @@ import chapter2.Apple;
 import chapter2.Color;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ConstructorReference {

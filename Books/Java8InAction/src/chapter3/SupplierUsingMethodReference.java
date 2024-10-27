@@ -2,7 +2,7 @@ package chapter3;
 
 import java.util.function.Supplier;
 
-public class SupplierPracticeUsingMethodReference {
+public class SupplierUsingMethodReference {
 
     public static void main(String arg[]) {
         Supplier<String> supplierForString = () -> new String("Hello world");
