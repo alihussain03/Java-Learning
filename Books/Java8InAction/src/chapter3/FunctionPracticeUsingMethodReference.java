@@ -6,23 +6,23 @@ import java.util.function.Function;
 
 public class FunctionPracticeUsingMethodReference {
 
-  public static void main(String arg[]) {
+    public static void main(String arg[]) {
 
-    List<String> name = new ArrayList<>();
-    name.add("ali");
-    name.add("hussain");
-    name.add("nokia");
-    Function<String, Integer> function = String::length;
-    System.out.println(filterUsingGenerics(name, function));
-  }
+        List<String> name = new ArrayList<>();
+        name.add("ali");
+        name.add("hussain");
+        name.add("nokia");
+        Function<String, Integer> function = String::length;
+        System.out.println(filterUsingGenerics(name, function));
+    }
 
-  static <T, R> List<R> filterUsingGenerics(List<T> listString, Function<T, R> function) {
-    List<R> testString2 = new ArrayList<>();
+    static <T, R> List<R> filterUsingGenerics(List<T> listString, Function<T, R> function) {
+        List<R> testString2 = new ArrayList<>();
 
-    listString.forEach(s -> {
+        listString.forEach(s -> {
 
-      testString2.add(function.apply(s));
-    });
-    return testString2;
-  }
+            testString2.add(function.apply(s));
+        });
+        return testString2;
+    }
 }
