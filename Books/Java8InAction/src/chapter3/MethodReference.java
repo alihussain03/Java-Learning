@@ -37,13 +37,12 @@ public class MethodReference {
 
         // 3
         // [Apple{color='red', weight=20}, Apple{color='green', weight=30}, Apple{color='green', weight=155}]
-        inventory.sort((a1, a2) -> a1.getWeight().compareTo(a2.getWeight()));
+        inventory.sort(Comparator.comparing(Apple::getWeight));
         System.out.println(inventory);
 
         // reshuffling things a little
         inventory.set(1, new Apple(10, "red"));
         inventory.sort(Comparator.comparing(Apple::getWeight));
-
     }
 
     public static class Apple {
