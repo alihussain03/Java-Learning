@@ -1,5 +1,5 @@
 package chapter2;
 
-public interface Predicate<T> {
+public interface PredicateExample<T> {
     boolean test(T t);
 }

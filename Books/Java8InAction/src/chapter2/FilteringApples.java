@@ -119,7 +119,7 @@ public class FilteringApples {
         }
     }
 
-    public static <T> List<T> filter(List<T> list, Predicate<T> p) {
+    public static <T> List<T> filter(List<T> list, PredicateExample<T> p) {
         List<T> result = new ArrayList<>();
         for (T e : list) {
             if (p.test(e)) {
