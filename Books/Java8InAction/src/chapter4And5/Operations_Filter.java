@@ -1,11 +1,13 @@
 package chapter4And5;
 
+import chapter4And5.pojo.Dish;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class FilterOperation {
+public class Operations_Filter {
     public static void main(String[] args) {
 
         List<Dish> vegetarianDished = Dish.menu.stream().filter(Dish::isVegetarian).collect(Collectors.toList());

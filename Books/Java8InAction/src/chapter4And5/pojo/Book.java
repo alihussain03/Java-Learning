@@ -1,4 +1,4 @@
-package chapter4And5.streams;
+package chapter4And5.pojo;
 
 public class Book {
     private String name;

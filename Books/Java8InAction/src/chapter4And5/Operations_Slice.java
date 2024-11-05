@@ -1,10 +1,12 @@
 package chapter4And5;
 
+import chapter4And5.pojo.Dish;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class SliceOperation {
+public class Operations_Slice {
     public static void main(String[] args) {
 
         List<Dish> specialMenu = Arrays.asList(new Dish("Seasonal Fruit", true, 120, Dish.Type.OTHER),

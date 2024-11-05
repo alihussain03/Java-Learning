@@ -1,10 +1,12 @@
 package chapter4And5;
 
+import chapter4And5.pojo.Dish;
+
 import java.util.Arrays;
 import java.util.List;
 
 // reduce operation is a terminal operation in streams that allows you to combine elements of a stream to produce a single result
-public class ReduceOperations {
+public class Operations_Reduce {
 
     public static void main(String[] args) {
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);

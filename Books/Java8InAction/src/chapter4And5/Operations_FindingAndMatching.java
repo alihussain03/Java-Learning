@@ -1,9 +1,11 @@
 package chapter4And5;
 
+import chapter4And5.pojo.Dish;
+
 import java.util.Arrays;
 import java.util.List;
 
-public class FindingAndMatchingOperation {
+public class Operations_FindingAndMatching {
     public static void main(String[] args) {
         boolean isVegetarian = Dish.menu.stream().anyMatch(Dish::isVegetarian);
         System.out.println("Does it have any vegetation dish ? " + isVegetarian);

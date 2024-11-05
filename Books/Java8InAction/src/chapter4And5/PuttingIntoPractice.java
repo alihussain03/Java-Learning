@@ -1,5 +1,8 @@
 package chapter4And5;
 
+import chapter4And5.pojo.Trader;
+import chapter4And5.pojo.Transaction;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
