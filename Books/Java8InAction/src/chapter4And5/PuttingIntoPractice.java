@@ -11,83 +11,57 @@ import static java.util.Comparator.comparing;
 public class PuttingIntoPractice {
 
     public static void main(String... args) {
+        List<Transaction> transactions = getTransactions();
+
+        // find all transactions in year 2011 and sort by value (small to high)
+        System.out.println("Find all transactions in year 2011 and sort by value (small to high): ");
+        transactions.stream().filter(transaction -> transaction.getYear() == 2011).sorted(comparing(Transaction::getValue)).forEach(System.out::println);
+
+        // find all unique cities where traders work
+        System.out.println("find all unique cities where traders work: ");
+        transactions.stream().map(transaction -> transaction.getTrader().getCity()).distinct().forEach(System.out::println);
+
+        System.out.println("find all unique cities where traders work using Set: ");
+        Set<String> cities = transactions.stream().map(transaction -> transaction.getTrader().getCity()).distinct().collect(Collectors.toSet());
+        System.out.println(cities);
+
+        // find all the traders from Cambridge name and sort them by name
+        System.out.println("Find all the traders from Cambridge name and sort them by name");
+        List<Trader> traders = transactions.stream().map(Transaction::getTrader).filter(trader -> trader.getCity().equals("Cambridge")).sorted(comparing(Trader::getName)).collect(Collectors.toList());
+        traders.forEach(System.out::println);
+
+        // return a string of all traders names sorted alphabetically
+        System.out.println("Return a string of all traders names sorted alphabetically");
+        transactions.stream().map(transaction -> transaction.getTrader().getName()).sorted().reduce((string, string2) -> string + " " + string2).ifPresent(System.out::println);
+
+        System.out.println("Return a string of all traders names sorted alphabetically using Joining");
+        String name = transactions.stream().map(transaction -> transaction.getTrader().getName()).sorted().collect(Collectors.joining());
+        System.out.println(name);
+
+        // any trader base in milan
+        boolean anyTraderFromMilan = transactions.stream().anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
+        System.out.println("Any trader from milan: " + anyTraderFromMilan);
+
+        // print the values of all  transactions from the traders living in cambridge
+        transactions.stream().filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity())).map(Transaction::getValue).forEach(System.out::println);
+
+        // highest value of all transactions
+        Optional<Integer> max = transactions.stream().map(Transaction::getValue).reduce(Integer::max);
+        System.out.println("Highest Transaction : " + max);
+
+        Optional<Transaction> smallestTransaction = transactions.stream().min(comparing(Transaction::getValue));
+
+        // Here I cheat a bit by converting the found Transaction (if any) to a String
+        // so that I can use a default String if no transactions are found (i.e. the Stream is empty).
+        System.out.println(smallestTransaction.map(String::valueOf).orElse("No transactions found"));
+    }
+
+    private static List<Transaction> getTransactions() {
         Trader raoul = new Trader("Raoul", "Cambridge");
         Trader mario = new Trader("Mario", "Milan");
         Trader alan = new Trader("Alan", "Cambridge");
         Trader brian = new Trader("Brian", "Cambridge");
 
-        List<Transaction> transactions = Arrays.asList(
-                new Transaction(brian, 2011, 300),
-                new Transaction(raoul, 2012, 1000),
-                new Transaction(raoul, 2011, 400),
-                new Transaction(mario, 2012, 710),
-                new Transaction(mario, 2012, 700),
-                new Transaction(alan, 2012, 950)
-        );
-
-        // problem 1
-        transactions.stream().filter(transaction -> transaction.getYear() == 2011)
-                .sorted(
-                        comparing(Transaction::getValue)
-                ).forEach(System.out::println);
-
-        // problem 2
-        transactions.stream().map(transaction -> transaction.getTrader().getCity()).distinct()
-                .forEach(System.out::println);
-
-        Set<String> cities = transactions.stream()
-                .map(transaction -> transaction.getTrader().getCity()).distinct()
-                .collect(Collectors.toSet());
-
-        // problem 3
-
-        List<Trader> traders = transactions.stream()
-                .map(Transaction::getTrader).filter(trader -> trader.getCity().equals("Cambridge"))
-                .sorted(comparing(Trader::getName))
-                .collect(Collectors.toList());
-
-        // problem 4
-
-        Optional<String> reduce = transactions.stream().map(Transaction::getTrader).map(Trader::getName)
-                .distinct().sorted().reduce((s, s2) -> s + s2);
-
-        String reduce1 = transactions.stream()
-                .map(transaction -> transaction.getTrader().getName()).distinct().sorted()
-                .reduce("", (s, s2) -> s + s2);
-        System.out.println(reduce1);
-
-        String reduce2 = transactions.stream()
-                .map(transaction -> transaction.getTrader().getName()).distinct().sorted()
-                .collect(Collectors.joining());
-
-        // problem 5
-        transactions.stream()
-                .anyMatch(transaction -> transaction.getTrader().getCity().equals("Milan"));
-
-        // problem 6
-        transactions.stream()
-                .filter(transaction -> "Cambridge".equals(transaction.getTrader().getCity()))
-                .map(Transaction::getValue).forEach(System.out::println);
-
-        // problem 7
-        Optional<Integer> max = transactions.stream()
-                .map(transaction -> transaction.getValue()).reduce(Integer::max);
-
-        //problem 8
-        Optional<Transaction> min = transactions.stream().reduce(
-                (transaction, transaction2) -> transaction.getValue() < transaction2.getValue()
-                        ? transaction : transaction2);
-
-        Optional<Transaction> min1 = transactions.stream()
-                .min(comparing(Transaction::getValue));
-
-        System.out.println(min.get().getValue());
-        System.out.println(min1.get().getValue());
-
-        Optional<Transaction> smallestTransaction = transactions.stream()
-                .min(comparing(Transaction::getValue));
-        // Here I cheat a bit by converting the found Transaction (if any) to a String
-        // so that I can use a default String if no transactions are found (i.e. the Stream is empty).
-        System.out.println(smallestTransaction.map(String::valueOf).orElse("No transactions found"));
+        return Arrays.asList(new Transaction(brian, 2011, 300), new Transaction(raoul, 2012, 1000), new Transaction(raoul, 2011, 400), new Transaction(mario, 2012, 710), new Transaction(mario, 2012, 700), new Transaction(alan, 2012, 950));
     }
 }

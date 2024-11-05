@@ -22,7 +22,6 @@ public class FindingAndMatchingOperation {
 
         System.out.println("Find First Demo:");
         List<Integer> someNumbers = Arrays.asList(2, 3, 4, 5, 6);
-        someNumbers.stream().map(integer -> integer * integer).filter(integer -> integer % 3 == 0).findFirst().ifPresent(integer -> System.out.println(integer));
-
+        someNumbers.stream().map(integer -> integer * integer).filter(integer -> integer % 3 == 0).findFirst().ifPresent(System.out::println);
     }
 }
