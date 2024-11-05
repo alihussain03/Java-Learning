@@ -3,7 +3,7 @@ package chapter4And5;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
-import old.streams.Book;
+import chapter4And5.streams.Book;
 
 public class MapOperationPractice {
 

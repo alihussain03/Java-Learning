@@ -1,4 +1,4 @@
-package old.streams;
+package chapter4And5.streams;
 
 public class Book {
 

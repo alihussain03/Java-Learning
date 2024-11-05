@@ -1,8 +1,4 @@
-package old.streams;
-
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+package chapter4And5.streams;
 
 public class ReduceOperationPractice {
 
