@@ -1,59 +1,57 @@
 package chapter4And5.streams;
 
 public class Book {
+    private String name;
+    private String author;
+    private String genre;
+    private double rating;
 
 
-  private String name;
-  private String author;
-  private String genre;
-  private double rating;
+    public Book(String name, String author, String genre, double rating) {
+        this.name = name;
+        this.author = author;
+        this.genre = genre;
+        this.rating = rating;
+    }
 
 
-  public Book(String name, String author, String genre, double rating) {
-    this.name = name;
-    this.author = author;
-    this.genre = genre;
-    this.rating = rating;
-  }
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getAuthor() {
+        return author;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
-  public String getAuthor() {
-    return author;
-  }
+    public String getGenre() {
+        return genre;
+    }
 
-  public void setAuthor(String author) {
-    this.author = author;
-  }
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
 
-  public String getGenre() {
-    return genre;
-  }
+    public double getRating() {
+        return rating;
+    }
 
-  public void setGenre(String genre) {
-    this.genre = genre;
-  }
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
 
-  public double getRating() {
-    return rating;
-  }
-
-  public void setRating(double rating) {
-    this.rating = rating;
-  }
-
-  @Override
-  public String toString() {
-    return "Book [name=" + name + ", Author=" + author + ", genre=" + genre + ", rating=" + rating
-        + "]";
-  }
+    @Override
+    public String toString() {
+        return "Book [name=" + name + ", Author=" + author + ", genre=" + genre + ", rating=" + rating
+                + "]";
+    }
 
 }
 

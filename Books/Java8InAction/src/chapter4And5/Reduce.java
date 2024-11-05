@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Reduce {
 
-  public static void main(String[] args) {
-    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+    public static void main(String[] args) {
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
 
-    Integer sum = numbers.stream().reduce(0, (integer, integer2) -> integer + integer2);
-    System.out.println(sum);
+        Integer sum = numbers.stream().reduce(0, (integer, integer2) -> integer + integer2);
+        System.out.println(sum);
 
-    Integer sumUsingMethodReference = numbers.stream().reduce(0, Integer::sum);
-    System.out.println(sumUsingMethodReference);
+        Integer sumUsingMethodReference = numbers.stream().reduce(0, Integer::sum);
+        System.out.println(sumUsingMethodReference);
 
-    Integer maxUsingMethodReference = numbers.stream().reduce(0, Integer::max);
-    System.out.println(maxUsingMethodReference);
+        Integer maxUsingMethodReference = numbers.stream().reduce(0, Integer::max);
+        System.out.println(maxUsingMethodReference);
 
-    Integer minUsingMethodReference = numbers.stream().reduce(0, Integer::min);
-    System.out.println(minUsingMethodReference);
-  }
+        Integer minUsingMethodReference = numbers.stream().reduce(0, Integer::min);
+        System.out.println(minUsingMethodReference);
+    }
 }

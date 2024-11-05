@@ -2,7 +2,7 @@ package chapter4And5.streams;
 
 public class ReduceOperationPractice {
 
-  public static void main(String arg[]) {
+    public static void main(String arg[]) {
    /* int g = Stream.of(21, 378, 43, 22, 88).reduce(0, (integer, integer2) -> integer + integer2);
     System.out.println(g);
 
@@ -18,5 +18,5 @@ public class ReduceOperationPractice {
 
     System.out.println(g1.get(0));*/
 
-  }
+    }
 }

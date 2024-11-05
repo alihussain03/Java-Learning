@@ -3,7 +3,7 @@ package chapter4And5.streams;
 
 public class FlatMap {
 
-  public static void main(String arg[]) {
+    public static void main(String arg[]) {
    /* Stream a = Stream.of("first", "stream");
     Stream b = Stream.of("Second", "Stream = ");
 
@@ -24,6 +24,6 @@ public class FlatMap {
     } catch (IOException e) {
       throw new RuntimeException(e);
     }*/
-  }
+    }
 
 }

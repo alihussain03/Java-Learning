@@ -2,7 +2,7 @@ package chapter4And5.streams;
 
 public class BoundedStreams {
 
-  public static void main(String arg[]) {
+    public static void main(String arg[]) {
     /*//1. stream() on a Collection
     List<Integer> list = List.of(1, 2, 34, 45, 45, 45);
     Stream<Integer> streamIntegers = list.stream();
@@ -40,5 +40,5 @@ public class BoundedStreams {
     builder.build();
 */
 
-  }
+    }
 }
