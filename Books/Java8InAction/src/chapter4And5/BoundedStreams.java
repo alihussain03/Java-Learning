@@ -1,6 +1,10 @@
 package chapter4And5;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -9,11 +13,11 @@ import java.util.stream.Stream.Builder;
 
 public class BoundedStreams {
 
-    public static void main(String[] args, boolean add) {
+    public static void main(String[] args) {
         //1. stream() on a Collection
         List<Integer> list = new ArrayList<>();
         list.add(1);
-        add;
+        list.add(4);
         list.add(7);
         list.add(9);
         list.add(5);
