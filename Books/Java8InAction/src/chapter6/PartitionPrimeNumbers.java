@@ -1,41 +1,29 @@
 package chapter6;
 
-import static java.util.stream.Collector.Characteristics.IDENTITY_FINISH;
-import static java.util.stream.Collectors.partitioningBy;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.EnumSet;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.function.BiConsumer;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
-import java.util.function.Supplier;
-import java.util.stream.Collector;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.partitioningBy;
 
 public class PartitionPrimeNumbers {
 
-  public static void main(String... args) {
-    System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
+    public static void main(String... args) {
+        System.out.println("Numbers partitioned in prime and non-prime: " + partitionPrimes(100));
   /*  System.out.println(
         "Numbers partitioned in prime and non-prime: " + partitionPrimesWithCustomCollector(100));*/
-  }
+    }
 
-  public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
-    return IntStream.rangeClosed(2, n).boxed()
-        .collect(partitioningBy(candidate -> isPrime(candidate)));
-  }
+    public static Map<Boolean, List<Integer>> partitionPrimes(int n) {
+        return IntStream.rangeClosed(2, n).boxed()
+                .collect(partitioningBy(candidate -> isPrime(candidate)));
+    }
 
-  public static boolean isPrime(int candidate) {
-    return IntStream.rangeClosed(2, candidate - 1)
-        .limit((long) Math.floor(Math.sqrt(candidate)) - 1)
-        .noneMatch(i -> candidate % i == 0);
-  }
+    public static boolean isPrime(int candidate) {
+        return IntStream.rangeClosed(2, candidate - 1)
+                .limit((long) Math.floor(Math.sqrt(candidate)) - 1)
+                .noneMatch(i -> candidate % i == 0);
+    }
 
   /*public static Map<Boolean, List<Integer>> partitionPrimesWithCustomCollector(int n) {
     return IntStream.rangeClosed(2, n).boxed().collect(new PrimeNumbersCollector());
