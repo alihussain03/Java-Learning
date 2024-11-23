@@ -14,14 +14,19 @@ import static java.util.stream.Collectors.*;
 public class PartitioningCollectors {
 
     public static void main(String... args) {
+        Map<Boolean, List<Dish>> menu = partitionByVegetarian();
+        System.out.println("Partition Menu : " + partitionByVegetarian() + "\n");
+        System.out.println("Only Vegetarian: " + menu.get(true) + "\n");
+        System.out.println("Partition Menu : " + partitionByVegetarian1() + "\n");
+        System.out.println("Most Caloric dishes are : " + mostCaloricPartitionedByVegetarian());
 
     }
 
-    private static Map<Boolean, List<Dish>> partitionByVegeterian() {
+    private static Map<Boolean, List<Dish>> partitionByVegetarian() {
         return menu.stream().collect(partitioningBy(Dish::isVegetarian));
     }
 
-    private static Map<Boolean, Map<Type, List<Dish>>> partitionByVegeterian1() {
+    private static Map<Boolean, Map<Type, List<Dish>>> partitionByVegetarian1() {
         return menu.stream().collect(partitioningBy(Dish::isVegetarian, groupingBy(Dish::getType)));
     }
 
