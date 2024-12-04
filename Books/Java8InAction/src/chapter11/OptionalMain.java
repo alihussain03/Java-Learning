@@ -4,22 +4,18 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-
-import static java.util.Collections.max;
 import static java.util.stream.Collectors.toSet;
 
 public class OptionalMain {
 
     public static void main(String[] args) {
         Insurance insurance = new Insurance("Insurance");
-        Car car = new Car(Optional.of(insurance));
+        Car car = new Car(Optional.ofNullable(insurance));
         Person person = new Person(Optional.of(car), 30);
 
         System.out.println("---------------------------");
         System.out.println("Use of Optional using Flat map");
-        System.out.println(getCarInsuranceName(Optional.of(person)));
+        System.out.println(getCarInsuranceName(Optional.ofNullable(person)));
 
         System.out.println("---------------------------");
         System.out.println("Use of Optional using Streams");
